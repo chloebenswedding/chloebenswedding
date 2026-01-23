@@ -110,6 +110,67 @@
 
 
 
+.text-block-section {
+margin: 3rem 0;
+
+}
+ 
+
+
+.iframe-container {
+	margin-top:100px;
+}
+
+#rsvp {
+	color:hsl(1, 17%, 95%);
+	width: auto;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 40px;
+}
+
+#rsvp span {
+	background-color: hsl(0, 15%, 55%);
+	padding: 10px 20px;
+}
+
+#mh-logo {
+	display: block;
+	width:200px;
+	margin:0 auto;
+	text-align: center;
+}
+
+
+
+
+/* Bouncing arrow */
+
+
+.bouncing-arrow-container {
+    height: 75px;
+    position: relative;
+    width: 100%;
+}
+
+@keyframes bouncing {
+    0% {bottom: 0;}
+    50% {bottom: 20px;}
+    100% {bottom: 0;}
+}
+
+.arrow {
+    animation: bouncing 2s infinite ease-in-out;
+    bottom: 0;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 50px;
+}
+
+
 
 
 
@@ -212,7 +273,7 @@ html {
 body *,
 html * {
 	font-size: var(--font-size);
-	line-height: 1rem;
+	line-height: 1.05rem;
 	letter-spacing: 0.05em
 }
 
@@ -222,7 +283,7 @@ body {
 
 .opening {
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -278,23 +339,26 @@ body {
 .text {
 	text-align: center;
 	text-transform: uppercase;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	padding: 0 1rem
 }
 
 .date-text {
-    font-size: 60px;
+    font-size: 35px;
     color: #9D7A79;
     font-family: "Didot LT" , Didot, serif;
     text-align:center;
+	margin-bottom: 100px;
 }
 
 @media (min-width: 700px) {
-	.text {
-		margin-top: 4rem;
-		margin-bottom: 4rem
-	}
+
+
+.opening {
+	height: 75%;
+}
+
 }
 
 .text .optional br {
@@ -305,6 +369,15 @@ body {
 	.text .optional br {
 		display: initial
 	}
+
+	.date-text {
+    font-size: 80px;
+}
+
+.opening {
+	height: 100%;
+}
+
 }
 
 .text p:not(:last-child) {
@@ -323,9 +396,13 @@ body {
 
 .text-big {
 	font-size: calc(var(--font-size) * var(--font-scale-xl));
-	line-height: 1.2rem;
+	line-height: 1.3rem;
 	letter-spacing: 0.1em;
 	letter-spacing: 0.1em
+}
+.text-big span {
+	font-size: calc(var(--font-size) * var(--font-scale-xl));
+	font-weight:700;
 }
 
 .text-big:not(:last-child) {
@@ -384,7 +461,7 @@ body {
 
 @media (min-width: 700px) {
 	.illustration-container {
-		margin: 4rem auto
+		margin: 0 auto
 	}
 }
 
